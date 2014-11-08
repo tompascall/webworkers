@@ -1,0 +1,27 @@
+{
+  "name": "blog_dom_test",
+  "version": "0.0.0",
+  "description": "testing DOM",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tompascall/dom_test.git"
+  },
+  "author": "tompascall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tompascall/dom_test/issues"
+  },
+  "homepage": "https://github.com/tompascall/dom_test",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "karma": "^0.12.19",
+    "karma-mocha": "^0.1.6",
+    "mocha": "^1.21.3",
+    "grunt-cli": "^0.1.13"
+  },
+  "devDependencies": {
+    "karma-expect": "^1.1.0"
+  }
+}
