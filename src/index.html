@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>test worker</title>
+  <meta charset="utf-8">
+  <style>
+    button {
+      width:200px;
+      height:100px;
+      font-size: 20px;
+      font-family: monospace;
+    }
+    #test {
+      background: red;
+      width:200px;
+      height:100px;
+      display: inline-block;
+      vertical-align:top;
+    }
+    #test p {
+      text-align: center;
+      font-size: 20px;
+      font-family: monospace;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: red;
+    }
+    #app {
+      display: none;
+    }
+    #sorry {
+
+    }
+  </style>
+</head>
+<body>
+  <h3>Testing HTML5 web workers</h3>
+  <p>This small app computes the sum of the natural numbers from 1 to 3333333333. The result is 5555555554511501000 (it is a nice number, isn't it?). Normally this operation lasts about 6-7 seconds. As you can see such a computation consideralibly blocks the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="#">web workers</a>.</p>
+  <p id="sorry"><strong>Sorry, but your browser doesn't support the HTML5 webworkers API. Please try the app on an other browser (Internet Explorer 10+, Firefox 3.5+, Opera 10.60+, Chrome 3+, Safari 4+)</strong></p>
+  <div id="app">
+    <p></p>
+    <button type="button" onclick="webworker.sendMessageToWorker()">calculate with worker</button>
+    <button type="button" onclick="notworker.calc()">calculate without worker</button>
+    <div id="test">
+      <p>click for testing responsiveness</p>
+    </div>
+    <p id="worker_timer">Computing time with web worker: </p>
+    <p id="notworker_timer">Computing time without web worker: </p>
+  </div>
+  <script src="spawner.js"></script>
+</body>
+</html>

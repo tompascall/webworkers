@@ -1,18 +1,18 @@
 {
-  "name": "blog_dom_test",
+  "name": "web workers test",
   "version": "0.0.0",
-  "description": "testing DOM",
+  "description": "testing web workers",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/tompascall/dom_test.git"
+    "url": "https://github.com/tompascall/webworkers.git"
   },
   "author": "tompascall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tompascall/dom_test/issues"
+
   },
-  "homepage": "https://github.com/tompascall/dom_test",
+  "homepage": "https://github.com/tompascall/webworkers",
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
