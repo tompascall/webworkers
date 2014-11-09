@@ -2,12 +2,22 @@
 <head>
   <title>test worker</title>
   <meta charset="utf-8">
+  <meta name="description" content="a tiny application to study HTML5 web workers">
+  <meta name="keywords" content="web workers, html5,javascript, application">
+  <meta name="author" content="tompascall">
   <style>
+    body {
+      max-width: 80%;
+      margin: 0 auto;
+    }
     button {
       width:200px;
       height:100px;
       font-size: 20px;
       font-family: monospace;
+    }
+    h3 {
+      margin-top: 40px;
     }
     #test {
       background: red;
@@ -36,17 +46,18 @@
 </head>
 <body>
   <h3>Testing HTML5 web workers</h3>
-  <p>This small app computes the sum of the natural numbers from 1 to 3333333333. The result is 5555555554511501000 (it is a nice number, isn't it?). Normally this operation lasts about 6-7 seconds. As you can see such a computation consideralibly blocks the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="#">web workers</a>.</p>
+  <p>This small app computes the sum of the natural numbers from 1 to 3333333333. The result is 5555555554511501000 (it is a nice number, isn't it?). Normally this operation lasts about 6-7 seconds. As you can see such a computation consideralibly blocks the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="http://js-workout.tompascall.com/web-workers-and-responsiveness/">web workers</a>.</p>
   <p id="sorry"><strong>Sorry, but your browser doesn't support the HTML5 webworkers API. Please try the app on an other browser (Internet Explorer 10+, Firefox 3.5+, Opera 10.60+, Chrome 3+, Safari 4+)</strong></p>
   <div id="app">
     <p></p>
-    <button type="button" onclick="webworker.sendMessageToWorker()">calculate with worker</button>
-    <button type="button" onclick="notworker.calc()">calculate without worker</button>
+    <button type="button" onclick="webworker.sendMessageToWorker()">click to calculate with worker</button>
+    <button type="button" onclick="notworker.calc()">click to calculate without worker</button>
     <div id="test">
-      <p>click for testing responsiveness</p>
+      <p>click to test responsiveness</p>
     </div>
-    <p id="worker_timer">Computing time with web worker: </p>
-    <p id="notworker_timer">Computing time without web worker: </p>
+    <p id="worker_timer">Time of computation with web worker: </p>
+    <p id="notworker_timer">Time of computation without web worker: </p>
+    <p>You can check the project on <a href="https://github.com/tompascall/webworkers">Github</a>.</p>
   </div>
   <script src="spawner.js"></script>
 </body>
