@@ -5,6 +5,7 @@
   (function(){
 
     if (supports_web_workers()) {
+      var n = 3333333333;
       showApp();
       setupResponsiveTest();
       initializeWorker();
@@ -27,7 +28,6 @@
 
     function initializeWorker() {
       webworker.init = function(){
-        var n = 3333333333;
         webworker.timerPar = document.getElementById("worker_timer");
         webworker.timerParOriginValue = webworker.timerPar.innerHTML;
         webworker.calculaton = false;
