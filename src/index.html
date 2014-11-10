@@ -18,6 +18,7 @@
     }
     h3 {
       margin-top: 40px;
+      font-size: 32px;
     }
     #test {
       background: red;
@@ -25,6 +26,9 @@
       height:100px;
       display: inline-block;
       vertical-align:top;
+    }
+    p {
+      font-size: 20px;
     }
     #test p {
       text-align: center;
@@ -42,14 +46,71 @@
     #sorry {
 
     }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      font-size: 1em;
+      border: 1px solid black;
+      padding: 3px 7px 2px 7px;
+    }
+    th {
+      width: 186px;
+      text-align: left;
+      padding-top: 5px;
+      padding-bottom: 4px;
+      background-color: red;
+      color: #ffffff;
+    }
+    tr.alt td {
+      color: #000000;
+      background-color: #dddddd;
+    }
   </style>
 </head>
 <body>
-  <h3>Testing HTML5 web workers</h3>
-  <p>This small app computes the sum of the natural numbers from 1 to 3333333333. The result is 5555555554511501000 (it is a nice number, isn't it?). Normally this operation lasts about 6-7 seconds. As you can see such a computation consideralibly blocks the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="http://js-workout.tompascall.com/web-workers-and-responsiveness/">web workers</a>.</p>
-  <p id="sorry"><strong>Sorry, but your browser doesn't support the HTML5 webworkers API. Please try the app on an other browser (Internet Explorer 10+, Firefox 3.5+, Opera 10.60+, Chrome 3+, Safari 4+)</strong></p>
+  <div id="sorry">
+    <p><strong>Sorry, but your browser doesn't support the HTML5 webworkers API. Please try the app on an other browser (Internet Explorer 10+, Firefox 3.5+, Opera 10.60+, Chrome 3+, Safari 4+)</strong></p>
+  </div>
   <div id="app">
-    <p></p>
+    <h3>Testing HTML5 web workers</h3>
+    <p>This small app tests how HTML5 web workers can help us to maintain the responsiveness of the page during a quite intensive background computation. The app computes the sum of the natural numbers from 1 to 3333333333 (you can check the result in the console of your browser's developer tools).</p>
+    <p>It is quite interesting but there is a huge difference between browsers as regards handling this computational task with and without web worker. In my experience the durations of computations were the following:</p>
+
+    <table>
+    <tr>
+      <th>Browser</th>
+      <th>Duration with worker (ms)</th>
+      <th>Duration without worker (ms)</th>
+    </tr>
+    <tr>
+      <td>Chrome 38.0</td>
+      <td>4000-7000</td>
+      <td>4000-7000</td>
+    </tr>
+    <tr class="alt">
+      <td>Firefox 32.0</td>
+      <td>4000-7000</td>
+      <td>60000-70000 (!)</td>
+    </tr>
+    <tr>
+      <td>IE 10</td>
+      <td>40000-50000 (!)</td>
+      <td>50000-60000 (!)</td>
+    </tr>
+    <tr class="alt">
+      <td>Safari</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Opera 25.0</td>
+      <td>5000-6000</td>
+      <td>5000-14000</td>
+    </tr>
+    </table>
+    <p>Such a computation can consideralibly block the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="http://js-workout.tompascall.com/web-workers-and-responsiveness/">web workers</a>.</p>
+
     <button type="button" onclick="webworker.sendMessageToWorker()">click to calculate with worker</button>
     <button type="button" onclick="notworker.calc()">click to calculate without worker</button>
     <div id="test">
