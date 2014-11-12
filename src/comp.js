@@ -1,7 +1,10 @@
 // comp.js
 // code for webworker
 
+(function(){
+  "use strict";
   self.addEventListener('message', calculateLots, false);
+    // the worker global scope is accessible through the `self` keyword.
 
   function calculateLots(e){
     var message = e.data; // n;
@@ -11,3 +14,5 @@
     }
     self.postMessage(acc);
   }
+}());
+
