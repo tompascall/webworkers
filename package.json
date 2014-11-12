@@ -10,7 +10,7 @@
   "author": "tompascall",
   "license": "MIT",
   "bugs": {
-
+    "url": "https://github.com/tompascall/webworkers.git"
   },
   "homepage": "https://github.com/tompascall/webworkers",
   "dependencies": {
