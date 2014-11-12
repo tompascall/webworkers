@@ -8,7 +8,7 @@ As [Wikipedia](http://en.wikipedia.org/wiki/Web_worker) says
 
 Web workers run in the background, they are not interrupted by user-interface scripts - and vice versa, these scripts don't hold up user interface scripts. They allows long tasks to be executed while keeping the UI responsive.
 
-The app computes the sum of the natural numbers from 1 to 3333333333. Without a worker it can freeze the user interface for about 5-70 seconds depending on the browser you use. If we spawn a worker and make it do the computation, the UI keeps its responsiveness during the computation.
+The app computes the sum of the natural numbers from 1 to 3333333333. Without a worker it can freeze the user interface for about 5-70 seconds depending on the browser you use. If we spawn a worker and make it do the computation, the UI keeps its responsiveness during the computing.
 
 I wrote a blogpost about this topic, you can read it [here](http://js-workout.tompascall.com/web-workers-and-responsiveness/).
 

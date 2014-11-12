@@ -8,7 +8,7 @@
   <meta name="author" content="tompascall">
   <style>
     body {
-      max-width: 80%;
+      max-width: 610px;
       margin: 0 auto;
     }
     button {
@@ -18,7 +18,8 @@
       font-family: monospace;
     }
     h3 {
-      margin-top: 40px;
+      margin: 40px auto 0 auto;
+      text-align: center;
       font-size: 2em;
     }
     #test {
@@ -29,7 +30,7 @@
       vertical-align:top;
     }
     p {
-      font-size: 1em;
+      font-size: 20px;
     }
     #test p {
       text-align: center;
@@ -51,7 +52,7 @@
       border-collapse: collapse;
     }
     td, th {
-      font-size: 1em;
+      font-size: 18px;
       border: 1px solid black;
       padding: 3px 7px 2px 7px;
     }
@@ -81,33 +82,33 @@
     <table>
     <tr>
       <th>Browser</th>
-      <th>Duration with worker (ms)</th>
-      <th>Duration without worker (ms)</th>
+      <th>Duration with worker (seconds)</th>
+      <th>Duration without worker (seconds)</th>
     </tr>
     <tr>
       <td>Chrome 38.0</td>
-      <td>4000-7000</td>
-      <td>4000-7000</td>
+      <td>4-7</td>
+      <td>4-7</td>
     </tr>
     <tr class="alt">
       <td>Firefox 32.0</td>
-      <td>4000-7000</td>
-      <td>60000-70000 (!)</td>
+      <td>4-7</td>
+      <td>4-70 (!)</td>
     </tr>
     <tr>
       <td>IE 10</td>
-      <td>40000-50000 (!)</td>
-      <td>50000-60000 (!)</td>
+      <td>40-50 (!)</td>
+      <td>50-60 (!)</td>
     </tr>
     <tr class="alt">
       <td>Safari 7.1</td>
-      <td>6000-7000</td>
-      <td>4000-5000</td>
+      <td>6-7</td>
+      <td>4-5</td>
     </tr>
     <tr>
       <td>Opera 25.0</td>
-      <td>5000-6000</td>
-      <td>5000-14000</td>
+      <td>5-6</td>
+      <td>5-14</td>
     </tr>
     </table>
     <p>Such a computation can consideralibly block the responsiveness of the page. One of the solution of avoiding this blocking effect is using <a href="http://js-workout.tompascall.com/web-workers-and-responsiveness/">web workers</a>.</p>
