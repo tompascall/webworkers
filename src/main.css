@@ -1,0 +1,61 @@
+ body {
+      max-width: 610px;
+      margin: 0 auto;
+    }
+    button {
+      width:200px;
+      height:100px;
+      font-size: 20px;
+      font-family: monospace;
+    }
+    h3 {
+      margin: 40px auto 0 auto;
+      text-align: center;
+      font-size: 2em;
+    }
+    #test {
+      background: red;
+      width:200px;
+      height:100px;
+      display: inline-block;
+      vertical-align:top;
+    }
+    p {
+      font-size: 20px;
+    }
+    #test p {
+      text-align: center;
+      font-size: 20px;
+      font-family: monospace;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: red;
+    }
+    #app {
+      display: none;
+    }
+    #sorry {
+
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      font-size: 18px;
+      border: 1px solid black;
+      padding: 3px 7px 2px 7px;
+    }
+    th {
+      width: 186px;
+      text-align: left;
+      padding-top: 5px;
+      padding-bottom: 4px;
+      background-color: red;
+      color: #ffffff;
+    }
+    tr.alt td {
+      color: #000000;
+      background-color: #dddddd;
+    }
