@@ -1,6 +1,6 @@
 {
-  "name": "web workers test",
-  "version": "0.0.0",
+  "name": "web-workers-test",
+  "version": "0.0.1",
   "description": "testing web workers",
   "scripts": {},
   "repository": {
