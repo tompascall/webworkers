@@ -3,10 +3,11 @@
       margin: 0 auto;
     }
     button {
-      width:200px;
+      width:198px;
       height:100px;
       font-size: 20px;
       font-family: monospace;
+
     }
     h3 {
       margin: 40px auto 0 auto;
@@ -15,7 +16,7 @@
     }
     #test {
       background: red;
-      width:200px;
+      width:198px;
       height:100px;
       display: inline-block;
       vertical-align:top;
