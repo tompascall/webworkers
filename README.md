@@ -12,4 +12,6 @@ The app computes the sum of the natural numbers from 1 to 3333333333. Without a 
 
 I wrote a blogpost about this topic, you can read it [here](http://js-workout.tompascall.com/web-workers-and-responsiveness/).
 
+Web workers API is supported by Internet Explorer 10+, Firefox 3.5+, Opera 10.60+, Chrome 3+, Safari 4+.
+
 You can try the app [here](http://webworkers.tompascall.com/).
